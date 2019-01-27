@@ -29,6 +29,14 @@ Usage: ssh_config_to_iterm_profiles [arguments]
     -h, --help                       Show this help
 ```
 
+## Running As Script
+
+Crystal can be run via source code. Put command arguments after the `--`
+
+```
+crystal ssh_config_to_iterm_profiles.cr -- -h
+```
+
 ## Development
 
 TODO: Write development instructions here

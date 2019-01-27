@@ -1,3 +1,5 @@
+#!/usr/bin/env crystal
+
 require "json"
 require "option_parser"
 
@@ -36,8 +38,11 @@ dynamic_profiles_dir = File.expand_path(dynamic_profiles_dir)
 host = nil
 tag = nil
 
+# Add custom parent profile associations here.
+# Last match wins.
 profile_parents = {
-  /prod-/ => "Production",
+  /.*/ => "Default",
+  # /^prod-/ => "Production",
 }
 
 profiles = JSON.build do |json|
